@@ -1,0 +1,36 @@
+<div class="row">
+
+  <div class="col-sm-3">
+    <div class="row row-spacer">
+      <div class="col-sm-12">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Services">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="panel panel-default">
+          {{#each}}
+            <div class="list-group">
+              {{#link-to 'service' this class="list-group-item"}}
+                <span class="badge">6</span>
+                {{dateCreated}}
+                <small class="text-muted">by {{createdBy}}</small>
+              {{/link-to}}
+            </div>
+          {{/each}}
+        </div>
+        <button class="btn btn-primary btn-sm">New Service</button>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="col-sm-9">{{outlet}}</div>
+</div>
+
